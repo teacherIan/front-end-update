@@ -30,6 +30,8 @@
     font-size: clamp(3rem, 10vw, 7rem);
 }
 
+
+
 .container_house {
     margin: 5vh .5vw .5vw 1vw;
     border-radius: 5px;
@@ -39,6 +41,18 @@
 
 
 }
+
+@media only screen and (max-width: 600px) {
+    .container_house {
+        width: 25vw;
+        margin: 0px;
+        border-radius: 5px;
+        border: 1px solid black;
+
+    }
+}
+
+
 
 .container_house_top {
     display: flex;
@@ -106,5 +120,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0
+    opacity: 0;
+    text-align: center;
 }
