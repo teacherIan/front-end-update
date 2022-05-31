@@ -28,7 +28,7 @@
 
 
 .header {
-    margin-top: 20px;
+    margin-top: 2px;
     width: 100vw;
     text-align: center;
     font-size: clamp(2.5rem, 6vw, 4rem);
@@ -56,14 +56,9 @@
         margin: 0px;
         border-radius: 5px;
         border: 2px solid black;
-<<<<<<< Updated upstream
-<<<<<<< HEAD
         height: 50vh;
-        margin-top: 7vh;
-
-=======
         height: 37vh;
->>>>>>> Stashed changes
+
 
     }
 
@@ -72,9 +67,7 @@
     }
 
     .container_house_bottom {
-<<<<<<< Updated upstream
         height: 50%;
-=======
         height: 37vh;
 
     }
@@ -93,10 +86,8 @@
 
     .container_house_top_img_sapphire {
         width: 50%;
->>>>>>> d69db6d771072009bb0a30aaba16b86015c5c54c
-=======
-        height: 45%;
->>>>>>> Stashed changes
+
+
     }
 
     .container_house_top_img {
@@ -189,16 +180,9 @@
     opacity: 0;
     text-align: center;
     z-index: 10;
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> d69db6d771072009bb0a30aaba16b86015c5c54c
-=======
+
 }
 
 ::backdrop {
     background-color: white;
 }
->>>>>>> Stashed changes
