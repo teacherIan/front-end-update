@@ -9,6 +9,7 @@ elem = document.getElementById('body');
 let startGameAfterFetch = false;
 
 startButton.addEventListener('click', () => {
+  startButton.style.pointerEvents = 'none';
   if (elem.requestFullscreen) {
     elem.requestFullscreen();
   } else if (elem.webkitRequestFullscreen) {
@@ -24,6 +25,7 @@ startButton.addEventListener('click', () => {
   const buttonInterval = setInterval(() => {
     if (startOpacity == 0) {
       startButton.style.display = 'none';
+
       clearInterval(buttonInterval);
     }
     startButton.style.opacity = startOpacity;
