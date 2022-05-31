@@ -6,14 +6,11 @@ winner = document.getElementById('winner');
 startButton = document.getElementById('start-button');
 startButtonContainer = document.getElementById('start-button-container');
 
-console.log(startButton);
-
 let startGameAfterFetch = false;
 
 startButton.addEventListener('click', () => {
   start = true;
   let startOpacity = 1;
-  console.log('Clicked');
 
   const buttonInterval = setInterval(() => {
     if (startOpacity == 0) {
@@ -28,7 +25,6 @@ startButton.addEventListener('click', () => {
 let start = false;
 
 const showWinner = () => {
-  console.log(houses[1].winningMessage);
   if (winningIndex == 0) {
     winner.innerHTML = ' ' + houses[0].winningMessage;
     winner.style.backgroundColor = '#c11c22';
@@ -109,7 +105,6 @@ const findWinner = () => {
 fetch('https://arcane-reaches-66470.herokuapp.com/get')
   .then((response) => response.json())
   .then((data) => {
-    console.log(data);
     houses[1].totalPoints = +data[0].points;
     houses[0].totalPoints = +data[1].points;
     houses[2].totalPoints = +data[2].points;
@@ -123,8 +118,6 @@ fetch('https://arcane-reaches-66470.herokuapp.com/get')
     //startButtonContainer.style.display = 'block';
     findWinner();
     startGameAfterFetch = true;
-
-    console.log(data);
   });
 
 let finished;
