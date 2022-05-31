@@ -56,15 +56,12 @@
         margin: 0px;
         border-radius: 5px;
         border: 2px solid black;
-        height: 50vh;
         height: 37vh;
 
 
     }
 
-    .container_house_top {
-        height: 45%;
-    }
+    .container_house_top {}
 
     .container_house_bottom {
         height: 50%;
@@ -72,21 +69,16 @@
 
     }
 
-    .container_house_top {
-        height: 50%;
-    }
+    .container_house_top {}
 
-    .container_house_bottom {
-        height: 50%;
-    }
+    .container_house_bottom {}
 
     .container_house_top_img {
         width: calc(40% + 10px);
     }
 
     .container_house_top_img_sapphire {
-        width: 50%;
-
+        width: calc(50% + 10px);
 
     }
 
@@ -95,12 +87,12 @@
     }
 
     .container_house_top_img_sapphire {
-        width: 50%
+        width: calc(50% + 10px)
     }
 
     .header {
-        margin-top: 0;
-        height: 20vh;
+        margin-top: 10px;
+
     }
 }
 
