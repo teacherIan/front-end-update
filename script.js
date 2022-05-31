@@ -5,10 +5,19 @@ pearlPoints = document.getElementById('pearl-points');
 winner = document.getElementById('winner');
 startButton = document.getElementById('start-button');
 startButtonContainer = document.getElementById('start-button-container');
-
+elem = document.getElementById('body');
 let startGameAfterFetch = false;
 
 startButton.addEventListener('click', () => {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) {
+    /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) {
+    /* IE11 */
+    elem.msRequestFullscreen();
+  }
   start = true;
   let startOpacity = 1;
 

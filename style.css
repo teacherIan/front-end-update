@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+
 }
 
 .container {
@@ -30,7 +31,7 @@
     margin-top: 20px;
     width: 100vw;
     text-align: center;
-    font-size: clamp(3rem, 10vw, 7rem);
+    font-size: clamp(2.5rem, 6vw, 4rem);
 }
 
 
@@ -45,16 +46,24 @@
 
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 600px) {
+    .container {
+        height: 80vh;
+    }
+
     .container_house {
         width: 50vw;
         margin: 0px;
         border-radius: 5px;
         border: 2px solid black;
+<<<<<<< Updated upstream
 <<<<<<< HEAD
         height: 50vh;
         margin-top: 7vh;
 
+=======
+        height: 37vh;
+>>>>>>> Stashed changes
 
     }
 
@@ -63,6 +72,7 @@
     }
 
     .container_house_bottom {
+<<<<<<< Updated upstream
         height: 50%;
 =======
         height: 37vh;
@@ -84,10 +94,23 @@
     .container_house_top_img_sapphire {
         width: 50%;
 >>>>>>> d69db6d771072009bb0a30aaba16b86015c5c54c
+=======
+        height: 45%;
+>>>>>>> Stashed changes
     }
 
+    .container_house_top_img {
+        width: calc(35% + 10px);
+    }
 
+    .container_house_top_img_sapphire {
+        width: 50%
+    }
 
+    .header {
+        margin-top: 0;
+        height: 20vh;
+    }
 }
 
 
@@ -139,12 +162,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: calc(15vw + 50px);
-    height: calc(10vh + 15px);
-    border-radius: 1000px;
-    font-size: clamp(1.5rem, 2vw, 2rem);
+    width: calc(30vh + 50px);
+    height: calc(30vh + 50px);
+    border-radius: 100%;
+    font-size: clamp(3rem, 7vw, 6rem);
     cursor: pointer;
     z-index: 11;
+    background-color: rgb(50, 146, 50);
+    color: white;
+    border: none;
+    opacity: .9;
 
 }
 
@@ -162,8 +189,16 @@
     opacity: 0;
     text-align: center;
     z-index: 10;
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 }
 =======
 }
 >>>>>>> d69db6d771072009bb0a30aaba16b86015c5c54c
+=======
+}
+
+::backdrop {
+    background-color: white;
+}
+>>>>>>> Stashed changes
