@@ -1,35 +1,60 @@
-rubyPoints = document.getElementById('ruby-points');
-sapphirePoints = document.getElementById('sapphire-points');
-amberPoints = document.getElementById('amber-points');
-pearlPoints = document.getElementById('pearl-points');
-winner = document.getElementById('winner');
-startButton = document.getElementById('start-button');
-startButtonContainer = document.getElementById('start-button-container');
-elem = document.getElementById('body');
+const rubyPoints = document.getElementById('ruby-points');
+const sapphirePoints = document.getElementById('sapphire-points');
+const amberPoints = document.getElementById('amber-points');
+const pearlPoints = document.getElementById('pearl-points');
+const winner = document.getElementById('winner');
+const startButton = document.getElementById('start-button');
+const startButtonContainer = document.getElementById('start-button-container');
+const elem = document.getElementById('body');
+const img = document.getElementById('img');
+const container = document.getElementById('container');
+const sabre = document.getElementById('sabre');
+
 let startGameAfterFetch = false;
 
+const createGameEnv = () => {
+  let currentOpacity = 0;
+  const showHousesInterval = setInterval(() => {
+    if (container.style.opacity < 1) {
+      currentOpacity += 0.03;
+      container.style.opacity = currentOpacity;
+      if (sabre.style.opacity < 0.2) {
+        sabre.style.opacity = currentOpacity;
+      }
+    } else {
+      start = true;
+      clearInterval(showHousesInterval);
+    }
+  }, 100);
+};
+
 startButton.addEventListener('click', () => {
+  startButtonContainer.style.backgroundColor = '#ffffff';
   startButton.style.pointerEvents = 'none';
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.webkitRequestFullscreen) {
-    /* Safari */
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) {
-    /* IE11 */
-    elem.msRequestFullscreen();
-  }
-  start = true;
+  // if (elem.requestFullscreen) {
+  //   elem.requestFullscreen();
+  // } else if (elem.webkitRequestFullscreen) {
+  //   /* Safari */
+  //   elem.webkitRequestFullscreen();
+  // } else if (elem.msRequestFullscreen) {
+  //   /* IE11 */
+  //   elem.msRequestFullscreen();
+  // }
+
   let startOpacity = 1;
 
   const buttonInterval = setInterval(() => {
-    if (startOpacity == 0) {
+    if (startOpacity < 0) {
+      console.log('finished');
+      createGameEnv();
       startButton.style.display = 'none';
+      img.style.display = 'none';
 
       clearInterval(buttonInterval);
     }
     startButton.style.opacity = startOpacity;
     startOpacity -= 0.01;
+    img.style.opacity -= 0.01;
   }, 10);
 });
 
