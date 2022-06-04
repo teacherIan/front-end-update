@@ -138,7 +138,7 @@ const findWinner = () => {
   }
 };
 
-fetch('https://arcane-reaches-66470.herokuapp.com/get')
+fetch('https://house-points-db.herokuapp.com/get')
   .then((response) => response.json())
   .then((data) => {
     houses[1].totalPoints = +data[0].points;
