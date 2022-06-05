@@ -51,12 +51,12 @@
 
 @media only screen and (max-width: 600px) {
     .winner {
-        z-index: 12;
+        z-index: 15;
     }
 
     .container {
         margin-top: 15px;
-        height: 85vh;
+        height: 83vh;
         align-items: stretch;
         justify-content: center;
 
@@ -109,8 +109,6 @@
         margin-top: 10px
     }
 }
-
-
 
 .container_house_top {
     display: flex;
@@ -298,6 +296,10 @@
     .img {
         top: 20%;
         height: 100%;
+    }
+
+    .neon-button {
+        margin-top: -20px
     }
 }
 
