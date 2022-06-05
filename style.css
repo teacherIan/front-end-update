@@ -34,7 +34,7 @@
     margin-top: 2px;
     width: 100vw;
     text-align: center;
-    font-size: clamp(2.5rem, 6vw, 6rem);
+    font-size: clamp(2rem, 6vw, 6rem);
 
 }
 
@@ -50,9 +50,13 @@
 }
 
 @media only screen and (max-width: 600px) {
+    .winner {
+        z-index: 12;
+    }
+
     .container {
         margin-top: 15px;
-        height: 90vh;
+        height: 85vh;
         align-items: stretch;
         justify-content: center;
 
