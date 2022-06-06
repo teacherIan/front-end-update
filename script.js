@@ -127,29 +127,32 @@ const houses = [
 let winningIndex = 0;
 let largestScore = 0;
 
-const findWinner = () => {
-  let entry = houses[0].totalPoints;
-  for (let i = 1; i < houses.length; i++) {
-    if (entry < houses[i].totalPoints) {
-      winningIndex = i;
-      largestScore = i;
-      entry = houses[i].totalPoints;
-    }
-  }
-};
-
 fetch('https://house-points-db.herokuapp.com/get')
   .then((response) => response.json())
   .then((data) => {
-    houses[1].totalPoints = +data[0].points;
-    houses[0].totalPoints = +data[1].points;
-    houses[2].totalPoints = +data[2].points;
-    houses[3].totalPoints = +data[3].points;
+    houses[0].totalPoints = +data[0].points;
+    houses[1].totalPoints = +data[1].points;
+    houses[2].totalPoints = +data[3].points;
+    houses[3].totalPoints = +data[2].points;
 
-    houses[1].winningMessage = data[0].message;
-    houses[0].winningMessage = data[1].message;
-    houses[2].winningMessage = data[2].message;
-    houses[3].winningMessage = data[3].message;
+    houses[0].winningMessage = data[0].message;
+    houses[1].winningMessage = data[1].message;
+    houses[2].winningMessage = data[3].message;
+    houses[3].winningMessage = data[2].message;
+
+    console.log(data[0].points);
+    console.log(data[0].message);
+
+    const findWinner = () => {
+      let entry = houses[0].totalPoints;
+      for (let i = 1; i < houses.length; i++) {
+        if (entry < houses[i].totalPoints) {
+          winningIndex = i;
+          largestScore = i;
+          entry = houses[i].totalPoints;
+        }
+      }
+    };
 
     //startButtonContainer.style.display = 'block';
     findWinner();
