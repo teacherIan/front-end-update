@@ -14,6 +14,7 @@
     flex-wrap: wrap;
     opacity: 0;
     height: 100vh;
+    background-color: rgba(255, 255, 255, 0.719);
 
 }
 
@@ -202,15 +203,23 @@
 }
 
 :root {
-    --color-neon: hsl(317, 100%, 54%);
+    /* --color-neon: hsl(317, 93%, 73%); */
+    --color-neon: white;
     --color-background: hsl(323 21% 16%);
     --group-opacity: .5;
+    --gradient: linear-gradient(45deg,
+            #1271b5,
+            #0e5a91,
+            #1271b5,
+            #89b8da)
 }
+
 
 *,
 ::before,
 ::after {
     box-sizing: border-box;
+    /* color:  */
 }
 
 
@@ -220,23 +229,34 @@
     height: 100vh;
     display: grid;
     place-items: center;
-    background-color: var(--color-background);
+    background: var(--gradient);
+    background-size: 600%;
     font-style: cursive;
     color: var(--color-neon);
-
     -webkit-transition: all 3000ms ease;
     -moz-transition: all 3000ms ease;
     -ms-transition: all 3000ms ease;
     -o-transition: all 3000ms ease;
     transition: all 3000ms ease;
 
-
+    animation: bg-animation 100s infinite alternate;
 }
+
+@keyframes bg-animation {
+    0% {
+        background-position: left;
+    }
+
+    100% {
+        background-position: right;
+    }
+}
+
 
 .neon-button {
     overflow: visible;
     z-index: 100;
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: var(--color-neon);
     display: inline-block;
     cursor: pointer;
@@ -246,8 +266,8 @@
     border-radius: 0.25em;
     text-shadow:
         0 0 1em var(--color-neon), 0 0 1em hsla(0, 0%, 100%, 0.5);
-    box-shadow: 0 0 1em .1em var(--color-neon),
-        inset 0 0 1em .1em var(--color-neon);
+    /* box-shadow: 0 0 1em .1em var(--color-neon); */
+    /* inset 0 0 1em .1em var(--color-neon); */
     position: relative;
     transition: opacity 500ms linear;
 }
@@ -288,7 +308,7 @@
     width: 100vw;
 
     opacity: var(--group-opacity);
-    transform: perspective(17em) rotateX(40deg) scale(1, 0.35);
+    transform: perspective(17em) rotateX(40deg) scale(1, 0.40);
     transition: opacity 300ms linear;
 }
 
@@ -306,8 +326,10 @@
 .neon-button:hover,
 .neon-button:focus {
     background-color: var(--color-neon);
-    color: rgba(255, 255, 255, 0.608);
+    color: #1271b5;
+    /* color: rgba(255, 255, 255, 0.608); */
     text-shadow: none;
+
 }
 
 .neon-button:hover+.img {

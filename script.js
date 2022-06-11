@@ -31,15 +31,6 @@ const createGameEnv = () => {
 startButton.addEventListener('click', () => {
   startButtonContainer.style.backgroundColor = '#ffffff';
   startButton.style.pointerEvents = 'none';
-  // if (elem.requestFullscreen) {
-  //   elem.requestFullscreen();
-  // } else if (elem.webkitRequestFullscreen) {
-  //   /* Safari */
-  //   elem.webkitRequestFullscreen();
-  // } else if (elem.msRequestFullscreen) {
-  //   /* IE11 */
-  //   elem.msRequestFullscreen();
-  // }
 
   let startOpacity = 1;
 
@@ -168,15 +159,46 @@ const gameInterval = setInterval(() => {
       if (start) {
         house.difference = house.totalPoints - house.currentNumber;
         if (house.difference > 100) {
-          house.currentNumber += Math.floor(Math.random() * 20);
+          house.currentNumber += Math.floor(Math.random() * 8);
+          //Make the counter more interesting with timeouts
+          // let num = Math.floor(Math.random() * 15);
+          // if (num == 10) {
+          //   setTimeout(() => {
+          //     console.log('Timeout');
+          //   }, 2000);
+          // }
         } else if (house.difference > 50) {
-          house.currentNumber += Math.floor(Math.random() * 10);
+          house.currentNumber += Math.floor(Math.random() * 4);
+          // let num = Math.floor(Math.random() * 15);
+          // if (num == 10) {
+          //   setTimeout(() => {
+          //     console.log('Timeout');
+          //   }, 2000);
+          // }
         } else if (house.difference > 25) {
-          house.currentNumber += Math.floor(Math.random() * 5);
-        } else if (house.difference > 12) {
           house.currentNumber += Math.floor(Math.random() * 3);
+          // let num = Math.floor(Math.random() * 15);
+          // if (num == 10) {
+          //   setTimeout(() => {
+          //     console.log('Final Timeout');
+          //   }, 5000);
+          // }
+        } else if (house.difference > 12) {
+          house.currentNumber += Math.floor(Math.random() * 2);
+          // let num = Math.floor(Math.random() * 10);
+          // if (num == 5) {
+          //   setTimeout(() => {
+          //     console.log('Timeout');
+          //   }, 2000);
+          // }
         } else if (house.difference > 0) {
           house.currentNumber += 1;
+          // let num = Math.floor(Math.random() * 5);
+          // if (num == 3) {
+          //   setTimeout(() => {
+          //     console.log('Timeout');
+          //   }, 2000);
+          // }
         }
         house.houseReference.innerHTML = house.currentNumber;
 
@@ -187,8 +209,10 @@ const gameInterval = setInterval(() => {
     });
 
     if (finished === houses.length) {
-      showWinner();
       clearInterval(gameInterval);
+      setTimeout(() => {
+        showWinner();
+      }, 1000);
     }
   }
-}, 70);
+}, 80);
