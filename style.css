@@ -6,6 +6,7 @@
 
 }
 
+
 .container {
     position: relative;
     display: flex;
@@ -14,7 +15,8 @@
     flex-wrap: wrap;
     opacity: 0;
     height: 100vh;
-    background-color: rgba(255, 255, 255, 0.719);
+    background-color: rgba(255, 255, 255, 0.917);
+    width: 100vw;
 
 }
 
@@ -168,8 +170,6 @@
     color: white;
     border: none;
     opacity: .9;
-
-
 }
 
 .winner {
@@ -203,6 +203,7 @@
 }
 
 :root {
+    font-style: italic;
     /* --color-neon: hsl(317, 93%, 73%); */
     --color-neon: white;
     --color-background: hsl(323 21% 16%);
@@ -254,6 +255,7 @@
 
 
 .neon-button {
+    margin-top: -100px;
     overflow: visible;
     z-index: 100;
     font-size: 3rem;
@@ -303,7 +305,7 @@
 
 .img {
     position: absolute;
-    top: -10%;
+    top: -15%;
     left: 0;
     width: 100vw;
 
@@ -319,8 +321,9 @@
     }
 
     .neon-button {
-        margin-top: -20px
+        margin-top: -100px
     }
+
 }
 
 .neon-button:hover,

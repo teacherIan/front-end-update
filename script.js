@@ -14,22 +14,22 @@ let startGameAfterFetch = false;
 
 const createGameEnv = () => {
   let currentOpacity = 0;
+
   const showHousesInterval = setInterval(() => {
-    if (container.style.opacity < 1) {
-      currentOpacity += 0.15;
+    if (container.style.opacity < 0.9) {
+      currentOpacity += 0.02;
       container.style.opacity = currentOpacity;
-      if (sabre.style.opacity < 0.1) {
+      if (sabre.style.opacity < 0.01) {
         sabre.style.opacity = currentOpacity;
       }
     } else {
       start = true;
       clearInterval(showHousesInterval);
     }
-  }, 100);
+  }, 30);
 };
 
 startButton.addEventListener('click', () => {
-  startButtonContainer.style.backgroundColor = '#ffffff';
   startButton.style.pointerEvents = 'none';
 
   let startOpacity = 1;
@@ -40,9 +40,11 @@ startButton.addEventListener('click', () => {
       createGameEnv();
       startButton.style.display = 'none';
       img.style.display = 'none';
+      startButtonContainer.style.background = '#ffffff';
 
       clearInterval(buttonInterval);
     }
+    startButtonContainer.style.opacity = startOpacity;
     startButton.style.opacity = startOpacity;
     startOpacity -= 0.01;
     img.style.opacity -= 0.01;
