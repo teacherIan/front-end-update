@@ -16,10 +16,10 @@ const createGameEnv = () => {
   let currentOpacity = 0;
 
   const showHousesInterval = setInterval(() => {
-    if (container.style.opacity < 0.9) {
+    if (container.style.opacity < 1) {
       currentOpacity += 0.02;
       container.style.opacity = currentOpacity;
-      if (sabre.style.opacity < 0.01) {
+      if (sabre.style.opacity < 0.15) {
         sabre.style.opacity = currentOpacity;
       }
     } else {
