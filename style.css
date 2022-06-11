@@ -204,7 +204,7 @@
 :root {
     --color-neon: hsl(317, 100%, 54%);
     --color-background: hsl(323 21% 16%);
-    --group-opacity: .2;
+    --group-opacity: .5;
 }
 
 *,
