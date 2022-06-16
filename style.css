@@ -62,7 +62,7 @@
 
 
 .container_house {
-    margin: 0vh .5vw 0vw 1vw;
+    margin: 0vh 1vw 0vw 1vw;
     border-radius: 5px;
     width: 22vw;
     border: 5px solid black;
@@ -312,7 +312,7 @@
 
     .container {
         margin-top: 2px;
-        height: 90vh;
+        height: 88vh;
         align-items: stretch;
         justify-content: center;
 
