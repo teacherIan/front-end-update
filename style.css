@@ -6,6 +6,24 @@
 
 }
 
+.container_house_top_img {
+    width: 75%;
+    height: 75%;
+    object-fit: contain;
+}
+
+.container_house_top_img_sapphire {
+    max-width: 95%;
+    max-height: 95%;
+    object-fit: contain;
+}
+
+.container_house_top_img_amber {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+
 
 .container {
     position: relative;
@@ -52,72 +70,14 @@
 
 }
 
-@media only screen and (max-width: 600px) {
-    .winner {
-        z-index: 15;
-    }
 
-    .container {
-        margin-top: 15px;
-        height: 83vh;
-        align-items: stretch;
-        justify-content: center;
-
-    }
-
-    .container_house {
-        width: 45vw;
-
-        border-radius: 5px;
-        border: 2px solid black;
-        height: 35vh;
-
-
-    }
-
-    .container_house_top {}
-
-    .container_house_bottom {
-
-        height: 35vh;
-
-    }
-
-    .container_house_top {}
-
-    .container_house_bottom {}
-
-    .container_house_top_img {
-        width: calc(40% + 10px);
-    }
-
-    .container_house_top_img_sapphire {
-        width: calc(50% + 10px);
-
-    }
-
-    .container_house_top_img {
-        width: calc(35% + 10px);
-    }
-
-    .container_house_top_img_sapphire {
-        width: calc(50% + 10px)
-    }
-
-    .container_house_top_img_ruby {
-        width: calc(50% + 10px)
-    }
-
-    .header {
-        margin-top: 10px
-    }
-}
 
 .container_house_top {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 70%;
+    width: 100%;
 }
 
 .amber {
@@ -141,7 +101,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: clamp(3rem, 6vw, 6rem);
+    font-size: clamp(4rem, 7vw, 6rem);
     text-align: center;
 }
 
@@ -342,4 +302,52 @@
 .neon-button:hover::after {
     opacity: 1;
 
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .winner {
+        z-index: 15;
+    }
+
+    .container {
+        margin-top: 15px;
+        height: 90vh;
+        align-items: stretch;
+        justify-content: center;
+
+    }
+
+    .container_house {
+        width: 45vw;
+
+        border-radius: 5px;
+        border: 2px solid black;
+        height: 35vh;
+
+
+    }
+
+
+    .header {
+        margin-top: 10px
+    }
+
+    .container_house_top_img {
+        width: 90%;
+        height: 90%;
+        object-fit: scale-down
+    }
+
+    .container_house_top_img_sapphire {
+        width: 100%;
+        height: 100%;
+        object-fit: scale-down
+    }
+
+    .container_house_top_img_amber {
+        width: 90%;
+        height: 90%;
+        object-fit: scale-down
+    }
 }
