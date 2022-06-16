@@ -36,7 +36,7 @@ startButton.addEventListener('click', () => {
 
   const buttonInterval = setInterval(() => {
     if (startOpacity < 0) {
-      console.log('finished');
+      startButton.requestFullscreen();
       createGameEnv();
       startButton.style.display = 'none';
       img.style.display = 'none';
