@@ -311,25 +311,26 @@
     }
 
     .container {
-        margin-top: 2px;
-        height: 88vh;
-        align-items: stretch;
+        margin-top: 10vh;
+        height: 80vh;
+        align-items: space-between;
         justify-content: center;
 
     }
 
     .container_house {
-        width: 45vw;
-
+        width: 44vw;
         border-radius: 5px;
         border: 2px solid black;
-        height: 35vh;
+        height: 34vh;
+        margin: 5px;
 
 
     }
 
 
     .header {
+        display: none;
         margin-top: 10px
     }
 

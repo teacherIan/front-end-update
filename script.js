@@ -19,7 +19,7 @@ const createGameEnv = () => {
     if (container.style.opacity < 1) {
       currentOpacity += 0.02;
       container.style.opacity = currentOpacity;
-      if (sabre.style.opacity < 0.15) {
+      if (sabre.style.opacity < 0.1) {
         sabre.style.opacity = currentOpacity;
       }
     } else {
